@@ -3,6 +3,14 @@
 This is my solution for the [**Celestial Bodies Database**](https://www.freecodecamp.org/learn/relational-database/build-a-celestial-bodies-database-project/build-a-celestial-bodies-database) 
 required project for the [**freeCodeCamp's Relational Databases Certification**](https://www.freecodecamp.org/learn/relational-database/) using PostgreSQL. <br />
 
+## Contents
+- Tables
+    - Galaxy
+    - Star
+    - Planet
+    - Moon
+    - Constellation
+- Project tasks
 
 ## Tables
 The database can be rebuilt by entering `psql -U postgres < universe.sql` in a terminal where the .sql file is.\
