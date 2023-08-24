@@ -31,8 +31,8 @@ Rebuilding the database using this file will result in the following tables: <br
 <sup>2</sup> varchar(30), unique, not null\
 <sup>3</sup> boolean\
 <sup>4</sup> int, foreign key REFERENCES constellation(constellation_id)\
-<sup>5</sup> text
-
+<sup>5</sup> text\
+[<sub>Back to top</sub>](#top)
 ### Star
 |star_id <sup>6</sup>	|name	<sup>7</sup>|galaxy_id	<sup>8</sup>|constellation_id	<sup>9</sup>|distance_earth_in_light_years <sup>10</sup>|
 |:-:|:---------:|:-:|:-:|:---------:|		
@@ -47,8 +47,8 @@ Rebuilding the database using this file will result in the following tables: <br
 <sup>7</sup> varchar(30), unique, not null\
 <sup>8</sup> int, foreign key REFERENCES galaxy(galaxy_id)\
 <sup>9</sup> int, foreign key REFERENCES constellation(constellation_id)\
-<sup>10</sup> num(4,1)
-
+<sup>10</sup> num(4,1)\
+[<sub>Back to top</sub>](#top) 
 ### Planet
 |planet_id	<sup>11</sup>|name	<sup>12</sup>|star_id	<sup>13</sup>|moon_quantity	<sup>14</sup>|distance_from_Earth_in_million_km<sup>15</sup>|
 |:-:|:-:|:-:|:-:|:-:|
@@ -69,8 +69,8 @@ Rebuilding the database using this file will result in the following tables: <br
 <sup>12</sup> varchar(30), unique, not null\
 <sup>13</sup> int, foreign key REFERENCES star(star_id)\
 <sup>14</sup> int\
-<sup>15</sup> num
-
+<sup>15</sup> num\
+[<sub>Back to top</sub>](#top)
 ### Moon
 |moon_id	<sup>16</sup>|name	<sup>17</sup>|planet_id<sup>18</sup>|	water	<sup>19</sup>|diameter_in_km<sup>20</sup>|		
 |:-:|:-:|:-:|:-:|:-:|
@@ -99,8 +99,8 @@ Rebuilding the database using this file will result in the following tables: <br
 <sup>17</sup> varchar(30), unique, not null\
 <sup>18</sup> int, foreign key REFERENCES planet(planet_id)\
 <sup>19</sup> boolean\
-<sup>20</sup> num(5,1)
-
+<sup>20</sup> num(5,1)\
+[<sub>Back to top</sub>](#top)
 ### Constellation
 |constellation_id	<sup>21</sup>|name	<sup>22</sup>|stars_with_known_planets<sup>23</sup>|shape<sup>24</sup>|
 |:-:|:-:|:-:|:-:|
@@ -117,8 +117,8 @@ Rebuilding the database using this file will result in the following tables: <br
 <sup>21</sup> serial, primary key, not null\
 <sup>22</sup> varchar(30), unique, not null\
 <sup>23</sup> int\
-<sup>24</sup> varchar(30)
-
+<sup>24</sup> varchar(30)\
+[<sub>Back to top</sub>](#top)
 
 ## Project Tasks
 The goal was to create a database in PostgreSQL that passed the following tests \(more details available on [**freeCodeCamp - Celestial Bodies Database**](https://www.freecodecamp.org/learn/relational-database/build-a-celestial-bodies-database-project/build-a-celestial-bodies-database)\):
@@ -145,4 +145,6 @@ The goal was to create a database in PostgreSQL that passed the following tests 
 - At least one column from each table should be required to be `UNIQUE`
 - All columns named `name` should be of type `VARCHAR`
 - Each primary key column should follow the naming convention `table_name_id`. For example, the `moon` table should have a primary key column named `moon_id`
-- Each foreign key column should have the same name as the column it is referencing
+- Each foreign key column should have the same name as the column it is referencing\
+
+[<sub>Back to top</sub>](#top)
